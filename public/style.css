@@ -176,6 +176,8 @@ header {
   border-radius: 30px;
 }
 
+/* NAV BAR STICKY */
+
 .nav-bar-group {
   display: flex;
   align-items: center;
@@ -246,6 +248,7 @@ header {
   cursor: pointer;
   transition: all;
 }
+/* ABOUT */
 
 #section2 {
   display: flex;
@@ -299,6 +302,8 @@ header {
   width: 80%;
 }
 
+/* PROJECTS */
+
 #section3 {
   display: flex;
   flex-direction: column;
@@ -348,6 +353,7 @@ header {
   color: inherit;
 }
 
+/* CONTACT */
 footer {
   display: flex;
   flex-direction: row;
@@ -399,6 +405,8 @@ label {
   color: black;
 }
 
+/* SOCIALS TAB STICKY */
+
 .icon-sticky {
   display: flex;
   flex-direction: column;
@@ -439,6 +447,16 @@ label {
   padding: 40px;
 }
 
+.error-page {
+  display: flex;
+  height: 100vh;
+  margin: 40px;
+  background-color: white;
+  color: black;
+  font-size: 40px;
+  border-radius: 30px;
+  padding: 40px;
+}
 /* RESPONSIVE */
 @media (max-width: 800px) {
   header {

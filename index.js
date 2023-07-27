@@ -15,6 +15,11 @@ app.get("/", function (req, res) {
 app.get("/thank-you", function (req, res) {
   res.sendFile(path.join(__dirname, "/views/thanks.html"));
 });
+
+app.get("/error", function (req, res) {
+  res.sendFile(path.join(__dirname, "/views/error.html"));
+});
+
 app.post("/contact", urlEncodedParser, function (req, res) {
   let formData = req.body;
   console.log(formData);
@@ -28,13 +33,11 @@ app.post("/contact", urlEncodedParser, function (req, res) {
     },
   });
 
-  // async..await is not allowed in global scope, must use a wrapper
   async function sendEmail() {
-    // send mail with defined transport object
     const info = await transport.sendMail({
       from: "afi.hillman17@gmail.com", // sender address
       to: formData.email, // list of receivers
-      subject: `What's good my boy ${formData.nameBIG}`, // Subject line
+      subject: `What's good my boy ${formData.nameInput}`,
       text: "WHAT'S GOOD GANG", // plain text body
       html: "<p>WHAT'S GOOD GANG</p>", // html body
     });
@@ -51,7 +54,7 @@ app.post("/contact", urlEncodedParser, function (req, res) {
 });
 
 app.get("/*", function (req, res) {
-  res.send("444 not found");
+  res.redirect("/error");
 });
 
 app.listen(port, () => {
