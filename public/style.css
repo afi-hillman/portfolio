@@ -273,7 +273,6 @@ header {
   height: 400px;
   /* width: 96%; */
   width: 520px;
-  margin: 10px;
 }
 
 #section2 .temp-card {
@@ -373,6 +372,10 @@ footer {
   margin-bottom: 30px;
 }
 
+label {
+  display: block;
+}
+
 #commentBox {
   height: 200px;
 }
@@ -425,16 +428,29 @@ footer {
   padding: 5px;
 }
 
+.thank-you {
+  display: flex;
+  height: 100vh;
+  margin: 40px;
+  background-color: white;
+  color: black;
+  font-size: 40px;
+  border-radius: 30px;
+  padding: 40px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 800px) {
   header {
     flex-direction: column;
     align-items: center;
   }
-
+  .moving-text {
+    font-size: 200px;
+  }
   .dropdown-container {
-    margin-right: 0;
     margin-top: 20px;
+    margin-right: -20px;
   }
 
   .card-group {
@@ -451,5 +467,37 @@ footer {
 
   #gameMe {
     display: none;
+  }
+
+  .container-projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .form-group input {
+    max-width: fit-content;
+  }
+
+  .nav-bar {
+    width: 60%;
+  }
+
+  .icon-sticky {
+    position: absolute;
+    transform: translate(180%, 100%);
+    border-radius: 30px;
+    height: 40px;
+    flex-direction: row;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    z-index: 20;
   }
 }
