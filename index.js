@@ -34,9 +34,9 @@ app.post("/contact", urlEncodedParser, function (req, res) {
     const info = await transport.sendMail({
       from: "afi.hillman17@gmail.com", // sender address
       to: formData.email, // list of receivers
-      subject: `What's good gang ${formData.nameBIG}`, // Subject line
-      text: "You are not radiant, but thanks!", // plain text body
-      html: "<p>You are not radiant, but thanks!</p>", // html body
+      subject: `What's good my boy ${formData.nameBIG}`, // Subject line
+      text: "WHAT'S GOOD GANG", // plain text body
+      html: "<p>WHAT'S GOOD GANG</p>", // html body
     });
 
     console.log("Message sent: %s", info.messageId);
