@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Afi Hillman | Software Engineer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div id="name"><img src="assets/logo only 2.png" alt="" /></div>
+      <div class="dropdown-container">
+        <div class="dropdown-content">
+          <a onclick="changeColor(1)" class="dropdown-color" id="color1"
+            >.color1</a
+          >
+          <a onclick="changeColor(2)" class="dropdown-color" id="color2"
+            >.color2</a
+          >
+          <a onclick="changeColor(3)" class="dropdown-color" id="color3"
+            >.color3</a
+          >
+          <div class="color-change">color mode</div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="section1">
+        <div class="moving-text-group">
+          <h1 class="moving-text">SOFTWARE ENGINEER</h1>
+          <h1 class="moving-text">SOFTWARE ENGINEER</h1>
+          <h1 class="moving-text">SOFTWARE ENGINEER</h1>
+          <h1 class="moving-text">SOFTWARE ENGINEER</h1>
+          <h1 class="moving-text">SOFTWARE ENGINEER</h1>
+          <h1 class="moving-text">SOFTWARE ENGINEER</h1>
+        </div>
+        <div class="card-group">
+          <div class="card" id="leftCard">
+            <p class="intro">This is Afi Hillman. He says hi!</p>
+          </div>
+          <div class="card" id="rightCard">
+            <img src="assets/pic-me.png" alt="picture of me" />
+          </div>
+        </div>
+      </div>
+      <div class="nav-bar-group">
+        <ul class="nav-bar">
+          <li id="homeNav">.home</li>
+          <div class="inner-menu">
+            <li id="aboutNav">02 about</li>
+            <li id="projectsNav">03 projects</li>
+            <!-- <li id="skills">04 skills</li> -->
+            <li id="contactNav">04 contact</li>
+          </div>
+        </ul>
+      </div>
+      <div id="section2">
+        <div class="title"><h2>ABOUT</h2></div>
+        <div class="about-card">
+          <div class="big-card">
+            <p id="aboutText">
+              Zero professional experience in coding, but trying to make the
+              most of it!
+            </p>
+          </div>
+          <div class="temp-card">
+            <img id="umLogo" src="assets/um-logo.png" alt="" />
+            <img id="gameMe" src="assets/game-me.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="section3">
+        <div class="title"><h2>PROJECTS</h2></div>
+        <div class="container-projects">
+          <div class="projects">
+            <a
+              href="https://htmlpreview.github.io/?https://github.com/afi-hillman/set-2023-day-7/blob/main/assessment/1/index.html"
+              target="_blank"
+            >
+              <div class="projects-card">
+                <p>
+                  Not too good at maths? Don't worry, I got you covered (I
+                  think).
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="projects">
+            <a
+              href="https://htmlpreview.github.io/?https://github.com/afi-hillman/set-2023-day-9/blob/main/assessment/1/index.html"
+              target="_blank"
+            >
+              <div class="projects-card">
+                <p>
+                  Relive your childhood as the Pokémon champion in this mini 1v1
+                  duel!
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="projects">
+            <a
+              href="https://htmlpreview.github.io/?https://github.com/afi-hillman/set-2023-day-9/blob/main/assessment/2/index.html"
+              target="_blank"
+            >
+              <div class="projects-card">
+                <p>How's your vocabulary?</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="icon-sticky">
+        <a href="https://www.instagram.com/afi.hillman/" target="_blank"
+          ><i class="bi bi-instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/afi-hillman/" target="_blank"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+        <a href="https://github.com/afi-hillman" target="_blank"
+          ><i class="bi bi-github"></i
+        ></a>
+      </div>
+    </main>
+    <footer>
+      <div class="left-side"><h2 id="contactTitle">GET IN TOUCH!</h2></div>
+      <div class="right-side">
+        <div class="form-group">
+          <p>NAME (*)</p>
+          <input type="text" />
+        </div>
+        <div class="form-group">
+          <p>EMAIL (*)</p>
+          <input type="email" name="email" id="emailInput" />
+        </div>
+        <div class="form-group">
+          <p>COMMENT (*)</p>
+          <input id="commentBox" type="text" />
+        </div>
+        <div><button id="submitButton">SEND MESSAGE</button></div>
+      </div>
+    </footer>
+  </body>
+</html>
