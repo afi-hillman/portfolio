@@ -15,4 +15,5 @@ async function query(text, values) {
   console.log("executed query", { text, duration, rows: res.rowCount });
   return res;
 }
+
 module.exports = query;
