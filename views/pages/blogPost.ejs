@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= blogPost.title %></title>
+    <title>Blog</title>
   </head>
   <body>
-    <div class="blog-card">
-      <h1><%= blogPost.title %></h1>
-      <h3><%= blogPost.subtitle %></h3>
-      <p><%= blogPost.blog_content %></p>
+    <% for (let i = 0; i < blogPost.length; i++) { %>
+    <div>
+      <h1><%= blogPost[i].title %></h1>
+      <h3><%= blogPost[i].subtitle %></h3>
+      <p><%= blogPost[i].blog_content %></p>
     </div>
+    <% } %>
   </body>
 </html>
