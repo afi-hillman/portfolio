@@ -2,23 +2,16 @@ const express = require("express");
 const app = express();
 const nodemailer = require("nodemailer");
 const port = 1001;
-const path = require("node:path");
 const bodyParser = require("body-parser");
+const appRoutes = require("./routes");
 
 app.use(express.static("public"));
 let urlEncodedParser = bodyParser.urlencoded({ extended: true });
 
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/views/index.html"));
-});
+app.set("view engine", "ejs");
 
-app.get("/thank-you", function (req, res) {
-  res.sendFile(path.join(__dirname, "/views/thanks.html"));
-});
-
-app.get("/error", function (req, res) {
-  res.sendFile(path.join(__dirname, "/views/error.html"));
-});
+//app use the routes from routes/index.js
+app.use(appRoutes);
 
 app.post("/contact", urlEncodedParser, function (req, res) {
   let formData = req.body;
@@ -51,10 +44,6 @@ app.post("/contact", urlEncodedParser, function (req, res) {
     .catch(() => {
       res.send("FAILED");
     });
-});
-
-app.get("/*", function (req, res) {
-  res.redirect("/error");
 });
 
 app.listen(port, () => {

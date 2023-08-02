@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>database</title>
+  </head>
+  <body>
+    <h1>Users</h1>
+
+    <h3>list of users</h3>
+    <a href="/new-user">create new user</a>
+
+    <ol>
+      <% users.forEach(user => { %>
+      <li><%= user.username %></li>
+      <% }); %>
+    </ol>
+  </body>
+</html>
