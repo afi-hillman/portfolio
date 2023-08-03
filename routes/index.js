@@ -2,14 +2,15 @@ const { Router } = require("express");
 const getHomeView = require("../controller/getHomeView");
 const getAllUserView = require("../controller/getAllUserView");
 const getNewUserView = require("../controller/getNewUserView");
-const getSelectedBlog = require("../controller/blogController");
+const { getAllBlogs, getSingleBlog } = require("../controller/blogController");
 const path = require("node:path");
 const appRoutes = Router();
 
 appRoutes.get("/", getHomeView);
 appRoutes.get("/all-user", getAllUserView);
 appRoutes.get("/new-user", getNewUserView);
-appRoutes.get("/blog", getSelectedBlog);
+appRoutes.get("/blog", getAllBlogs);
+appRoutes.get("/blog/:slug", getSingleBlog);
 
 appRoutes.get("/thank-you", function (req, res) {
   res.render("pages/thanks");

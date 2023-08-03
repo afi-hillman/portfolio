@@ -3,11 +3,16 @@
   <head>
     <title>Blog</title>
     <link rel="stylesheet" href="blogStyle.css" />
+    <script>
+      function navigateBlog(slug) {
+        window.location.href = `/blog/${slug}`;
+      }
+    </script>
   </head>
   <body>
     <div class="container">
       <% for (let i = 0; i < blogPost.length; i++) { %>
-      <div class="card">
+      <div class="card" onclick="navigateBlog('<%= blogPost[i].slug %>')">
         <h1><%= blogPost[i].title %></h1>
         <h3><%= blogPost[i].subtitle %></h3>
         <p><%= blogPost[i].blog_content %></p>
